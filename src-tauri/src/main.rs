@@ -15,24 +15,13 @@ fn main() {
     let open = CustomMenuItem::new("open".to_string(), "Open");
     let quit = CustomMenuItem::new("quit".to_string(), "Quit").accelerator("Cmd+Q");
     let system_tray_menu = SystemTrayMenu::new().add_item(open).add_item(quit);
+    
     tauri::Builder::default()
         // .plugin(tauri_plugin_positioner::init())
-        .system_tray(SystemTray::new().with_menu(system_tray_menu))
+        .system_tray(SystemTray::new().with_title("Update For Weather Info")
+        .with_menu(system_tray_menu))
         .on_system_tray_event(|app, event| match event {
-            // SystemTrayEvent::LeftClick {
-            //     position: _,
-            //     size: _,
-            //     ..
-            // } => {
-            //     let window = app.get_window("main").unwrap();
-            //     if window.is_visible().unwrap() {
-            //         window.hide().unwrap();
-            //     } else {
-            //         window.show().unwrap();
-            //         window.set_focus().unwrap();
-            //     }
-                
-            // }
+
             SystemTrayEvent::RightClick {
                 position: _,
                 size: _,

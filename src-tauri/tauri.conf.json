@@ -48,7 +48,7 @@
     },
     "systemTray": {
       "iconPath": "icons/WON.png",
-      "iconAsTemplate": false,
+      "iconAsTemplate": true,
       "menuOnLeftClick": true
     },
     "security": {
