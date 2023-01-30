@@ -47,8 +47,9 @@
       }
     },
     "systemTray": {
-      "iconPath": "icons/icon.png",
-      "iconAsTemplate": true
+      "iconPath": "icons/WON.png",
+      "iconAsTemplate": false,
+      "menuOnLeftClick": true
     },
     "security": {
       "csp": null
@@ -60,9 +61,14 @@
       {
         "fullscreen": false,
         "height": 600,
-        "resizable": true,
+        "resizable": false,
         "title": "won-weather",
-        "width": 800
+        "width": 600,
+        "visible": false,
+        "hiddenTitle": true,
+        "decorations": false,
+        "focus": false,
+        "transparent": false
       }
     ]
   }
